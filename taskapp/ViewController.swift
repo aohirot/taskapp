@@ -149,7 +149,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
            let count = results.count
            if (count == 0) {
                // 検索結果が0件の場合
-            taskArray = realm.objects(Task.self)
+            taskArray = realm.objects(Task.self).filter(predicate)
            } else {
                // 検索データがある場合
             taskArray = results
